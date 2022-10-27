@@ -27,8 +27,4 @@ class GradeBook
       student.grade < score
     end
   end
-
-  def all_student_grades
-    require 'pry'; binding.pry
-  end
 end

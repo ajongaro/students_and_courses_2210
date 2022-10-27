@@ -13,7 +13,6 @@ RSpec.describe GradeBook do
 
   let(:gradebook) { GradeBook.new("Jamison")}
 
-
   describe '#initialize' do
     it 'exists' do
       expect(gradebook).to be_a(GradeBook) 

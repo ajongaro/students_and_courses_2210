@@ -18,7 +18,7 @@ class School
     end.flatten
   end
 
-  def students_with_grade_between(low,high)
+  def students_with_grade_between(low, high)
     all_students.select do |student|
       student.grade > low && student.grade < high
     end

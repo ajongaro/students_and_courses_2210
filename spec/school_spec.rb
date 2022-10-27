@@ -23,7 +23,7 @@ RSpec.describe School do
     end
   end
 
-  describe '#other_methods' do
+  describe '#all_grades & grade_in_range' do
     before(:each) do
       course1.enroll(student1)
       course1.enroll(student2)
@@ -49,6 +49,4 @@ RSpec.describe School do
       expect(school.students_with_grade_between(80,100)).to eq([student1])
     end
   end
-
-
 end
