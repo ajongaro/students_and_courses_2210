@@ -5,7 +5,7 @@ RSpec.describe Student do
 
   describe "#initialize" do
     it 'exists' do
-      expect(student).to be_a(Student)j
+      expect(student).to be_a(Student)
     end
     
     it 'has a name' do
@@ -37,4 +37,5 @@ RSpec.describe Student do
 
       expect(student.grade).to eq(83.5)
     end
+  end
 end
