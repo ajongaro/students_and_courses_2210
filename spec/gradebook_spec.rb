@@ -32,8 +32,8 @@ RSpec.describe GradeBook do
       expect(gradebook.courses).to eq([course1, course2])
     end
   end
-      
-  describe '#other_methods' do
+  
+  describe '#students & #students_with_scores_under' do
     before(:each) do
       course1.enroll(student1)
       course1.enroll(student2)
@@ -41,14 +41,22 @@ RSpec.describe GradeBook do
       course2.enroll(student4)
       student1.log_score(91)
       student1.log_score(81)
-      student2.log_score(72)
       student2.log_score(62)
+      student2.log_score(52)
       student3.log_score(73)
       student3.log_score(83)
       student4.log_score(40)
       student4.log_score(45)
       gradebook.add_course(course1)
       gradebook.add_course(course2)
+    end
+    
+    it 'can list all students in its courses' do
+      expect(gradebook.students).to eq([student1, student2, student3, student4])
+    end
+    
+    it 'can list students with grade below threshhold' do
+      expect(gradebook.students_with_scores_under(60)).to eq([student2,student4])
     end
   end
 end
